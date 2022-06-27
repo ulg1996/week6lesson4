@@ -4,10 +4,87 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Weather app</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/e5976ddd14.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <h1>Hello this is a test</h1>
-    <h2>Now I am doing a second test</h2>
+    <div class="container">
+      <div class="weather-app">
+        <h2>Current weather in <span id=city>Düsseldorf</span></h2>
+          <h3>Friday 10:15</h3>
+        <section class="weather-conditions-now">
+          <p> <span class="temperature" id= "temperature">15</span><span class ="units">°C</span> 
+     | Humidity: <span id="humidity">83</span>% | Wind: <span id="wind">19</span>km/h</p>
+        </section>
+        <section class="weather-emoji"><i class="fa-solid fa-sun"></i></section>
+         <header class="search"></header>
+        <div class="form"><form class="search-form" id="search-form">
+          <input
+            type="text"
+            id="city-input"
+            placeholder="Enter city here"
+            autocomplete="on"
+            autofocus="on"
+          />
+          <input type="submit" class="search-button shadow-sm" value="Go" />
+           <button
+                class="current-location-button"
+                id = "current-location-button"
+              >Current location
+              </button>
+        </form></div>
+        <p class="forecast">Forecast for the next 5 days:</p>
+        <section></section>
+        <div class="card-group">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Friday</h5>
+      <section class="forecast-emoji"><i class="fa-solid fa-cloud"></i></section>
+      <p class="card-text">15°C | 10°C</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Saturday</h5>
+       <section class="forecast-emoji"><i class="fa-solid fa-sun"></i></i></section>
+      <p class="card-text">20°C | 14°C </p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Sunday</h5>
+      <section class="forecast-emoji"><i class="fa-solid fa-cloud"></i></section>
+      <p class="card-text">18°C | 13°C </p>
+    </div>
+  </div>
+ <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Monday</h5>
+      <section class="forecast-emoji"><i class="fa-solid fa-cloud-showers-heavy"></i></section>
+      <p class="card-text">15°C | 13°C</p>
+    </div>
+  </div>
+   <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Tuesday</h5>
+      <section class="forecast-emoji"><i class="fa-solid fa-sun"></i></section>
+      <p class="card-text">19°C | 15°C</p>
+    </div>
+  </div>
+      </div>
+    </div>
+    <script src= "src/index.js"></script>
   </body>
 </html>
+
